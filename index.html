@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>STRIMKO BOT</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>STRIMKO BOT</h1>
+
+    <!-- Статус -->
+
+    <div class="card">
+
+        <h2>Статус</h2>
+
+        <div id="status" class="status stopped">
+            🔴 Остановлен
+        </div>
+
+    </div>
+
+    <!-- Запуск -->
+
+    <div class="card">
+
+        <label class="switch">
+
+            <input type="checkbox" id="botEnabled">
+
+            <span class="slider"></span>
+
+            <span class="text">
+                Запустить бота
+            </span>
+
+        </label>
+
+    </div>
+
+    <!-- Скорость -->
+
+    <div class="card">
+
+        <h2>Скорость</h2>
+
+        <label class="radio">
+            <input type="radio" name="speed" value="veryslow">
+            Очень медленно
+        </label>
+
+        <label class="radio">
+            <input type="radio" name="speed" value="slow" checked>
+            Медленно
+        </label>
+
+        <label class="radio">
+            <input type="radio" name="speed" value="normal">
+            Быстрее
+        </label>
+
+        <label class="radio">
+            <input type="radio" name="speed" value="fast">
+            Ещё быстрее
+        </label>
+
+        <label class="radio">
+            <input type="radio" name="speed" value="veryfast">
+            Очень быстро
+        </label>
+
+        <label class="radio">
+            <input type="radio" name="speed" value="superfast">
+            Супер быстро
+        </label>
+
+    </div>
+
+    <!-- Порядок сообщений -->
+
+    <div class="card">
+
+        <h2>Порядок сообщений</h2>
+
+        <label class="radio">
+            <input type="radio" name="mode" value="random" checked>
+            Случайный
+        </label>
+
+        <label class="radio">
+            <input type="radio" name="mode" value="order">
+            По порядку
+        </label>
+
+    </div>
+
+    <!-- После окончания -->
+
+    <div class="card">
+
+        <h2>После окончания списка</h2>
+
+        <label class="radio">
+            <input type="radio" name="finish" value="restart" checked>
+            Начать сначала
+        </label>
+
+        <label class="radio">
+            <input type="radio" name="finish" value="stop">
+            Остановить бота
+        </label>
+
+    </div>
+
+    <!-- Количество сообщений -->
+
+    <div class="card">
+
+        <h2>Количество сообщений</h2>
+
+        <div id="messageCount">
+            0
+        </div>
+
+    </div>
+
+</div>
+
+<script src="bot.js"></script>
+
+</body>
+</html>
